@@ -6,7 +6,7 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 router.post('/', upload.single('file'),  (req, res, next) => {
-    console.log('Upload route hit');
+    
     next();
   }, handleUpload);
 
